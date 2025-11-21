@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+::selection {
+    background-color: rgb(99, 189, 133);
+    color: black;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    font-weight: 500;
+}
