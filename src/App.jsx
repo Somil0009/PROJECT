@@ -48,16 +48,18 @@ function App() {
   return (
     <>
       <ScrollStack>
-        <CardNav
-          logo={<SiHomebridge className='text-black text-4xl' />}
-          logoAlt="Company Logo"
-          items={items}
-          baseColor="#fff"
-          menuColor="#000"
-          buttonBgColor="#111"
-          buttonTextColor="#fff"
-          ease="power3.out"
-        />
+          <div className="sticky top-0 z-20">
+            <CardNav
+              logo={<SiHomebridge className='text-black text-4xl' />}
+              logoAlt="Company Logo"
+              items={items}
+              baseColor="#fff"
+              menuColor="#000"
+              buttonBgColor="#111"
+              buttonTextColor="#fff"
+              ease="power3.out"
+            />
+          </div>
         <div style={{ width: '100%', height: '800px', position: 'relative' }}>
           <LightRays
             raysOrigin="top-center"
@@ -136,7 +138,7 @@ function App() {
           <br />
           <p className="text-center text-yellow-300 text-3xl">We turn your vision into reality.</p>
           <br />
-          <p className="text-center text-white text-2xl">Looking for the right property in Gujarat as well as Dubai? At <strong>Aroundtown Realty</strong>, your reliable <strong>real estate consultants in Ahmedabad, Gujarat and Dubai.</strong> From cozy homes to prime investments, we connect you to properties that truly fit your goals. Start your journey with confidence and let us bring your vision to life.</p>
+          <p className="text-center text-white text-2xl">Looking for the right property in Gujarat as well as Dubai? At <strong>Noorinfra</strong>, your reliable <strong>real estate consultants in Ahmedabad, Gujarat and Dubai.</strong> From cozy homes to prime investments, we connect you to properties that truly fit your goals. Start your journey with confidence and let us bring your vision to life.</p>
         </div>
         <div style={{ height: '600px', position: 'relative' }}>
           <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
@@ -280,7 +282,7 @@ function App() {
           <div className="flex items-center justify-between w-full">
             <div className="flex-1">
               <h1 className='text-6xl'>Buy</h1>
-              <p>Looking to buy your dream home or a smart investment? Aroundtown Realty helps you find the perfect property with expert support at every step. As a leading real estate agent in Ahmedabad, we ensure secure, value-driven purchases in prime locations.</p>
+              <p>Looking to buy your dream home or a smart investment? Noorinfra helps you find the perfect property with expert support at every step. As a leading real estate agent in Ahmedabad, we ensure secure, value-driven purchases in prime locations.</p>
             </div>
             <div className="flex items-center justify-end pl-8">
               <BsHouseCheckFill className="text-9xl text-right" />
@@ -302,7 +304,7 @@ function App() {
           <div className="flex items-center justify-between w-full">
             <div className="flex-1">
               <h1 className='text-6xl'>Rent</h1>
-              <p>Whether you’re looking to rent a home or lease out your property, Aroundtown Realty simplifies the process. We connect owners and tenants with ease, backed by verified listings and expert assistance. We handle all rental needs quickly and professionally.</p>
+              <p>Whether you’re looking to rent a home or lease out your property, Noorinfra simplifies the process. We connect owners and tenants with ease, backed by verified listings and expert assistance. We handle all rental needs quickly and professionally.</p>
             </div>
             <div className="flex items-center justify-end pl-8">
               <FaBuildingShield className="text-9xl text-right" />
@@ -320,19 +322,24 @@ function App() {
             </div>
           </div>
         </ScrollStackItem>
-        <br /><br /><br /><br />
-        <br /><br /><br /><br />
-        <br /><br /><br /><br />
-        <ScrollVelocity
-          texts={['| Real Estate', '| Noorinfra ']}
-          velocity={50}
-          className="custom-scroll-text"
-        />
-        <footer className='bg-amber-400 z-99 px-8 py-8'>
+
+        {/* Spacer to allow last card to scroll up naturally */}
+        {/* <div style={{ height: '100vh' }}></div> */}
+        <br /><br />
+        <div className="relative z-10">
+          <ScrollVelocity
+            texts={['| Real Estate', '| Noorinfra ']}
+            velocity={50}
+            className="custom-scroll-text"
+          />
+          <br />
+          <br />
+        </div>
+        <footer className='bg-amber-400 relative z-10 px-8 py-8'>
           <div className="flex flex-col md:flex-row justify-between items-start w-full gap-8">
             <div id="left1" className="flex-1 mb-8 md:mb-0">
               <SiHomebridge className='text-black text-6xl mb-4' />
-              <p className='text-black text-2xl'>Aroundtown Realty is a leading company specialising in real estate consultancy. We help buyers to buy & sellers to sell property.</p>
+              <p className='text-black text-2xl'>Noorinfra is a leading company specialising in real estate consultancy. We help buyers to buy & sellers to sell property.</p>
             </div>
             <div id="center" className="flex-1 mb-8 md:mb-0 text-center">
               <h1 className='text-black text-5xl mb-4'>Popular Searches</h1>
@@ -345,14 +352,14 @@ function App() {
             <div id="bottom" className="flex-1 md:text-right">
               <h1 className='text-black text-5xl mb-4'>Contact Information</h1>
               <ul className='text-black'>
-                <li>SOMEWERE</li>
-                <li>SOMEWERE</li>
-                <li>SOMEWERE</li>
+                <li>Rishikesh</li>
+                <li>Uttrakhand</li>
+                <li>India</li>
               </ul>
             </div>
           </div>
           <hr className="my-6 border-black" />
-          <p className='text-4xl text-black text-center'>Developer Somil</p>
+          <p className='text-4xl text-black text-center'>✦ Noorinfra ✦</p>
         </footer>
       </ScrollStack>
     </>

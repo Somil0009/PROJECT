@@ -6,7 +6,8 @@ export const ScrollStackItem = ({ children, itemClassName = '' }) => (
         className={`scroll-stack-card relative w-full h-80 my-8 p-12 rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] box-border origin-top will-change-transform ${itemClassName}`.trim()}
         style={{
             backfaceVisibility: 'hidden',
-            transformStyle: 'preserve-3d'
+            transformStyle: 'preserve-3d',
+            zIndex: 0
         }}
     >
         {children}
@@ -23,7 +24,7 @@ const ScrollStack = ({
     scaleEndPosition = '10%',
     baseScale = 0.85,
     scaleDuration = 0.5,
-    rotationAmount = 0,
+    rotationAmount = 0.2,
     blurAmount = 0,
     useWindowScroll = false,
     onStackComplete
@@ -130,7 +131,9 @@ const ScrollStack = ({
             if (isPinned) {
                 translateY = scrollTop - cardTop + stackPositionPx + itemStackDistance * i;
             } else if (scrollTop > pinEnd) {
-                translateY = pinEnd - cardTop + stackPositionPx + itemStackDistance * i;
+                // Continue scrolling up after unpinning
+                const unpinnedProgress = scrollTop - pinEnd;
+                translateY = pinEnd - cardTop + stackPositionPx + itemStackDistance * i + unpinnedProgress;
             }
 
             const newTransform = {
