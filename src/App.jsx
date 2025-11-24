@@ -269,6 +269,8 @@ function App() {
           </div>
         </div>
         <br /><br />
+        <div className="relative z-10"> <ScrollVelocity texts={['| Real Estate', '| Noorinfra ']} velocity={50} className="custom-scroll-text" /> <br /> <br /> </div>
+        <br /><br />
         <br /><br />
         <br /><br />
         <div>
@@ -326,15 +328,7 @@ function App() {
         {/* Spacer to allow last card to scroll up naturally */}
         {/* <div style={{ height: '100vh' }}></div> */}
         <br /><br />
-        <div className="relative z-10">
-          <ScrollVelocity
-            texts={['| Real Estate', '| Noorinfra ']}
-            velocity={50}
-            className="custom-scroll-text"
-          />
-          <br />
-          <br />
-        </div>
+        
         <footer className='bg-amber-400 relative z-10 px-8 py-8'>
           <div className="flex flex-col md:flex-row justify-between items-start w-full gap-8">
             <div id="left1" className="flex-1 mb-8 md:mb-0">
