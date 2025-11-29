@@ -5,10 +5,26 @@
     color: black;
 }
 
+::-webkit-scrollbar {
+    background-color: rgba(0, 0, 255, 0);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+    cursor: grab;
+    &:active {
+        cursor: grabbing;
+    }
+}
+
 body {
-    overflow-x: hidden;
+    overflow: hidden !important;
     background-color: black;
     color: white;
     font-family: monospace;
     font-weight: 500;
+    /* margin-right: 5px; */
+    margin-left: 5px;
 }

@@ -35,7 +35,7 @@ function PixelTransition({
         pixel.classList.add('absolute', 'hidden');
         pixel.style.backgroundColor = pixelColor;
 
-        const size = 100 / gridSize;
+        const size = 400 / gridSize;
         pixel.style.width = `${size}%`;
         pixel.style.height = `${size}%`;
         pixel.style.left = `${col * size}%`;
@@ -109,13 +109,12 @@ function PixelTransition({
         ${className}
         bg-[#271E37]
         text-white
-        rounded-[15px]
+        rounded-[20px]
         border-2
         border-white
-        w-[300px]
-        max-w-full
         relative
         overflow-hidden
+        mb-5
       `}
       style={style}
       onMouseEnter={!isTouchDevice ? handleEnter : undefined}
@@ -125,6 +124,19 @@ function PixelTransition({
       onBlur={!isTouchDevice ? handleLeave : undefined}
       tabIndex={0}
     >
+
+      <style>{`
+      @media(max-width: 767px) {
+      .${className} {
+      width: 80% !important;
+      justify-self: center !important;
+      justify-items: center !important;
+      align-items: center !important;
+      align-self: center !important;
+      text-align: center !important;
+      justify-content: center !important;
+      }
+      `}</style>
       <div style={{ paddingTop: aspectRatio }} />
 
       <div className="absolute inset-0 w-full h-full" aria-hidden={isActive}>
