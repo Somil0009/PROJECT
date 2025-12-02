@@ -14,10 +14,12 @@
     background-color: gray;
     border-radius: 10px;
     cursor: grab;
-    &:active {
-        cursor: grabbing;
-    }
 }
+
+::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
 
 body {
     overflow: hidden !important;

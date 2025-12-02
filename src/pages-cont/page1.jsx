@@ -102,6 +102,12 @@ const PAGE = () => {
                 <div style={{ height: '600px', position: 'relative' }}>
                     <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
                 </div>
+                    <br /><br /><br />
+                    <br /><br /><br />
+                    <br /><br /><br />
+                    <br /><br /><br />
+                    <br /><br /><br />
+                    <br /><br /><br />
                 <div>
                     <h1 className="text-center text-white text-5xl">New and Featured Projects</h1><br />
                     <p className='text-center text-white text-2xl'>We offer exclusive deals.</p><br />
@@ -109,9 +115,9 @@ const PAGE = () => {
                     <br /><br /><br />
                     <br /><br /><br />
                     {/* start */}
-                    <div className="lg:flex flex-row gap-8 justify-center items-stretch w-full md:grid grid-cols-2">
-                        <div className="flex-1 min-w-[250px] max-w-xs">
-                            <PixelTransition 
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-full px-2 sm:px-0 place-items-center">
+                        <div className="w-full max-w-xs flex justify-center items-center mx-auto">
+                            <PixelTransition
                                 firstContent={
                                     <img
                                         src="https://aroundtownrealty.in/wp-content/uploads/2024/11/bellagio-iscon-ambli-1-Aroundtown-680x510.jpg"
@@ -126,8 +132,7 @@ const PAGE = () => {
                                             display: "grid",
                                             placeItems: "center",
                                             backgroundColor: "#111"
-                                        }
-                                    }
+                                        }}
                                     >
                                         <p className='text-center' style={{ fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Bellagio Iscon Ambli</p>
                                     </div>
@@ -139,7 +144,7 @@ const PAGE = () => {
                                 className="custom-pixel-card "
                             />
                         </div>
-                        <div className="flex-1 min-w-[250px] max-w-xs">
+                        <div className="w-full max-w-xs flex justify-center items-center mx-auto">
                             <PixelTransition
                                 firstContent={
                                     <img
@@ -167,7 +172,7 @@ const PAGE = () => {
                                 className="custom-pixel-card"
                             />
                         </div>
-                        <div className="flex-1 min-w-[250px] max-w-xs">
+                        <div className="w-full max-w-xs flex justify-center items-center mx-auto">
                             <PixelTransition
                                 firstContent={
                                     <img
@@ -196,7 +201,7 @@ const PAGE = () => {
                                 className="custom-pixel-card"
                             />
                         </div>
-                        <div className="flex-1 min-w-[250px] max-w-xs">
+                        <div className="w-full max-w-xs flex justify-center items-center mx-auto">
                             <PixelTransition
                                 firstContent={
                                     <img
@@ -229,7 +234,7 @@ const PAGE = () => {
                     {/* end */}
                 </div>
                 <br /><br />
-                <div className="relative z-10"> <ScrollVelocity texts={['| Real Estate', '| Noorinfra ']} velocity={50} className="custom-scroll-text" /> <br /> <br /> </div>
+                <div className="relative z-10"> <ScrollVelocity texts={['| Real Estate | Noorinfra']} velocity={50} className="custom-scroll-text" /> <br /> <br /> </div>
                 <br /><br />
                 <br /><br />
                 <br /><br />
@@ -241,46 +246,46 @@ const PAGE = () => {
                     <p className='text-center text-white text-2xl'><span className='text-yellow-300'>ATR</span> offers end-to-end real estate solutions right from identifying deals to finalizing purchases and arranging finance. We focus on securing your capital, enhancing your property portfolio, and unlocking future-ready opportunities at smart price points.</p>
                 </div>
                 <ScrollStackItem itemClassName="bg-yellow-500">
-                    <div className="flex items-center justify-between w-full">
-                        <div className="flex-1">
-                            <h1 className='text-6xl'>Buy</h1>
-                            <p>Looking to buy your dream home or a smart investment? Noorinfra helps you find the perfect property with expert support at every step. As a leading real estate agent in Ahmedabad, we ensure secure, value-driven purchases in prime locations.</p>
+                    <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
+                        <div className="flex-1 min-w-0">
+                            <h1 className='text-3xl md:text-6xl wrap-break-word text-center'>Buy</h1>
+                            <p className='text-sm md:text-base wrap-break-word'>Looking to buy your dream home or a smart investment? Noorinfra helps you find the perfect property with expert support at every step.{ /* As a leading real estate agent in Ahmedabad, we ensure secure, value-driven purchases in prime locations.*/}</p>
                         </div>
-                        <div className="flex items-center justify-end pl-8">
-                            <BsHouseCheckFill className="text-9xl text-right" />
+                        <div className="flex items-center justify-end md:pl-8">
+                            <BsHouseCheckFill className="text-[200px] text-right" />
                         </div>
                     </div>
                 </ScrollStackItem>
                 <ScrollStackItem itemClassName="bg-red-500">
-                    <div className="flex items-center justify-between w-full">
-                        <div className="flex-1">
-                            <h1 className='text-6xl'>Sell</h1>
-                            <p>Sell your property faster and at the right price with ATR. We offer expert market insights, professional listings, and strategic promotion. Property sales are streamlined and optimized for profit by Gujarat’s trusted real estate consultant.</p>
+                    <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
+                        <div className="flex-1 min-w-0">
+                            <h1 className='text-3xl md:text-6xl wrap-break-word text-center'>Sell</h1>
+                            <p className='text-sm md:text-base wrap-break-word'>Sell your property faster and at the right price with ATR. We offer expert market insights, professional listings, and strategic promotion.{ /* Property sales are streamlined and optimized for profit by Gujarat's trusted real estate consultant.*/}</p>
                         </div>
-                        <div className="flex items-center justify-end pl-8">
-                            <FaMoneyBill1Wave className="text-9xl text-right" />
+                        <div className="flex items-center justify-end md:pl-8">
+                            <FaMoneyBill1Wave className="text-[200px] text-right" />
                         </div>
                     </div>
                 </ScrollStackItem>
                 <ScrollStackItem itemClassName="bg-green-500">
-                    <div className="flex items-center justify-between w-full">
-                        <div className="flex-1">
-                            <h1 className='text-6xl'>Rent</h1>
-                            <p>Whether you’re looking to rent a home or lease out your property, Noorinfra simplifies the process. We connect owners and tenants with ease, backed by verified listings and expert assistance. We handle all rental needs quickly and professionally.</p>
+                    <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
+                        <div className="flex-1 min-w-0">
+                            <h1 className='text-3xl md:text-6xl wrap-break-word text-center'>Rent</h1>
+                            <p className='text-sm md:text-base wrap-break-word'>Whether you're looking to rent a home or lease out your property, Noorinfra simplifies the process. We connect owners and tenants with ease, backed by verified listings and expert assistance.{ /*We handle all rental needs quickly and professionally.*/}</p>
                         </div>
-                        <div className="flex items-center justify-end pl-8">
-                            <FaBuildingShield className="text-9xl text-right" />
+                        <div className="flex items-center justify-end md:pl-8">
+                            <FaBuildingShield className="text-[200px] text-right justify-center" />
                         </div>
                     </div>
                 </ScrollStackItem>
                 <ScrollStackItem itemClassName="bg-blue-500">
-                    <div className="flex items-center justify-between w-full">
-                        <div className="flex-1">
-                            <h1 className='text-6xl'>Invest</h1>
-                            <p>Unlock smart investment opportunities. We guide investors through profitable real estate deals across Gujarat and Dubai. As a leading real estate advisor in Dubai.</p>
+                    <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
+                        <div className="flex-1 min-w-0">
+                            <h1 className='text-3xl md:text-6xl wrap-break-word text-center'>Invest</h1>
+                            <p className='text-sm md:text-base wrap-break-word'>Unlock smart investment opportunities. We guide investors through profitable real estate deals across Gujarat and Dubai. As a leading real estate advisor in Dubai.</p>
                         </div>
-                        <div className="flex items-center justify-end pl-8">
-                            <FaChartArea className="text-9xl text-right" />
+                        <div className="flex items-center justify-end md:pl-8">
+                            <FaChartArea className="text-[200px] text-right" />
                         </div>
                     </div>
                 </ScrollStackItem>

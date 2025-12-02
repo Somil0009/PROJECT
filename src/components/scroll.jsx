@@ -314,6 +314,10 @@ class App {
     });
     this.gl = this.renderer.gl;
     this.gl.clearColor(0, 0, 0, 0);
+    // Ensure canvas fills parent
+    this.gl.canvas.style.width = '100%';
+    this.gl.canvas.style.height = '100%';
+    this.gl.canvas.style.display = 'block';
     this.container.appendChild(this.gl.canvas);
   }
   createCamera() {
@@ -469,5 +473,13 @@ export default function CircularGallery({
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
-  return <div className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing" ref={containerRef} />;
+  return (
+    <div
+      className="w-full min-h-screen md:min-h-150 overflow-hidden cursor-grab active:cursor-grabbing flex items-center justify-center p-4 md:p-12 rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] box-border origin-top will-change-transform"
+      ref={containerRef}
+      style={{ maxWidth: '100vw', wordBreak: 'break-word', overflowWrap: 'anywhere', overflow: 'hidden' }}
+    >
+      {/* Card content should be rendered here if needed, otherwise the canvas will be inside this responsive div */}
+    </div>
+  );
 }

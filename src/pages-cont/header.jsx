@@ -1,5 +1,5 @@
 import CardNav from '../components/header'
-import { SiHomebridge } from "react-icons/si";
+// import { SiHomebridge } from "react-icons/si";
 const HEADER = () => {
     const items = [
         {
@@ -35,7 +35,7 @@ const HEADER = () => {
         <>
             <div className="sticky top-0 z-20">
                 <CardNav
-                    logo={<SiHomebridge className='text-black text-4xl' />}
+                    logo={'NOOR1.jpg'}
                     logoAlt="Company Logo"
                     items={items}
                     baseColor="#fff"

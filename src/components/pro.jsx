@@ -115,6 +115,11 @@ function PixelTransition({
         relative
         overflow-hidden
         mb-5
+        w-full
+        max-w-xs
+        sm:max-w-sm
+        md:max-w-md
+        flex flex-col items-center justify-center
       `}
       style={style}
       onMouseEnter={!isTouchDevice ? handleEnter : undefined}
@@ -124,19 +129,6 @@ function PixelTransition({
       onBlur={!isTouchDevice ? handleLeave : undefined}
       tabIndex={0}
     >
-
-      <style>{`
-      @media(max-width: 767px) {
-      .${className} {
-      width: 80% !important;
-      justify-self: center !important;
-      justify-items: center !important;
-      align-items: center !important;
-      align-self: center !important;
-      text-align: center !important;
-      justify-content: center !important;
-      }
-      `}</style>
       <div style={{ paddingTop: aspectRatio }} />
 
       <div className="absolute inset-0 w-full h-full" aria-hidden={isActive}>
@@ -145,14 +137,14 @@ function PixelTransition({
 
       <div
         ref={activeRef}
-        className="absolute inset-0 w-full h-full z-[2]"
+        className="absolute inset-0 w-full h-full z-2"
         style={{ display: 'none' }}
         aria-hidden={!isActive}
       >
         {secondContent}
       </div>
 
-      <div ref={pixelGridRef} className="absolute inset-0 w-full h-full pointer-events-none z-[3]" />
+      <div ref={pixelGridRef} className="absolute inset-0 w-full h-full pointer-events-none z-3" />
     </div>
   );
 }
