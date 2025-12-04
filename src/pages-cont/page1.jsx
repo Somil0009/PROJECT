@@ -234,7 +234,7 @@ const PAGE = () => {
                     {/* end */}
                 </div>
                 <br /><br />
-                <div className="relative z-10"> <ScrollVelocity texts={['| Real Estate | Noorinfra']} velocity={50} className="custom-scroll-text" /> <br /> <br /> </div>
+                <div className="relative z-10"> <ScrollVelocity texts={['| Real Estate', '| Noorinfra']} velocity={50} className="custom-scroll-text" /> <br /> <br /> </div>
                 <br /><br />
                 <br /><br />
                 <br /><br />
