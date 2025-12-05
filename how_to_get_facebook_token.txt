@@ -1,0 +1,37 @@
+How to Get a Facebook Access Token for Posting
+=================================================
+
+1. Go to Facebook for Developers:
+   - Visit https://developers.facebook.com/ and log in with your Facebook account.
+
+2. Create a Facebook App:
+   - Click on "My Apps" > "Create App".
+   - Choose "For Everything Else" or "Business" (for posting to pages).
+   - Fill in the required details and create the app.
+
+3. Add Facebook Login:
+   - In your app dashboard, click "Add Product" > "Facebook Login" > "Set Up".
+   - Set the redirect URI (for testing, you can use https://localhost/).
+
+4. Get User Access Token:
+   - Go to "Tools" > "Access Token Tool" in the app dashboard.
+   - Click "Get User Access Token".
+   - Select permissions: `pages_show_list`, `pages_manage_posts`, `pages_read_engagement`, `publish_to_groups` (as needed).
+   - Log in and authorize the app.
+   - Copy the generated access token.
+
+5. (Optional) Get Page Access Token:
+   - Use the Graph API Explorer (https://developers.facebook.com/tools/explorer/).
+   - Select your app and user token.
+   - Make a GET request to `/me/accounts` to list your pages and get the page access token.
+
+6. Use the Token in Your App:
+   - Use the access token in your API requests to post content to Facebook.
+   - Example API endpoint: `https://graph.facebook.com/{page-id}/feed`
+   - POST parameters: `message`, `access_token`, etc.
+
+7. Security Note:
+   - Never share your access token publicly.
+   - Store it securely in environment variables or a secure vault.
+
+For more details, see Facebook's official documentation: https://developers.facebook.com/docs/facebook-login/access-tokens/
